@@ -1,4 +1,5 @@
 const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = (env) => {
   const mode = env.production ? "production" : "development";
@@ -29,5 +30,11 @@ module.exports = (env) => {
         },
       ],
     },
+    plugins: [
+      new HtmlWebpackPlugin({
+        template: "./src/index.html",
+        filename: "index.html",
+      }),
+    ],
   };
 };
