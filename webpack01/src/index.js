@@ -1,3 +1,5 @@
+import './app.scss'
+
 const app = document.getElementById("app");
 
 const h1 = document.createElement("h1");
